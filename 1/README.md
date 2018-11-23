@@ -50,7 +50,7 @@ Position your cursor after `impo` and press Ctrl+Space, the completion shortcut.
 
 Then, position your cursor after `pri` and press Ctrl+Space. This should insert `print()`, the only completion option available, and your cursor will be inside the parentheses. Try typing the following while relying on code completion for every word: `statistics.mean(numbers)`.
 
-Next, let's learn about another very useful feature of PyCharm. Position your cursor anywhere in the word `print` and press Ctrl+Shift+Space. This opens the quick documentation dialog which shows any available documentation about something. You will use this frequently to find out what an unfamiliar method does. What does it say the `print` function does?
+Next, let's learn about another very useful feature of PyCharm. Position your cursor anywhere in the word `print` and press Ctrl+Shift+Space. This opens the quick documentation dialog which shows any available documentation about something. You will use this frequently to find out what an unfamiliar function does. What does it say the `print` function does?
 
 Finally, let's learn how to run the file we just created. Click the ▶ button in the toolbar. The Run panel will pop up at the bottom of the window with the result of what we just ran. The output of our file was `3`, which will be displayed there.
 
@@ -58,13 +58,13 @@ Finally, let's learn how to run the file we just created. Click the ▶ button i
 
 Let's start by analyzing the file we just created.
 
-The first line, `import statistics`, is an *import statement*. A *statement* is a keyword that performs some functionality. For example, an import statement imports (provides your code with access to) a library (a package of existing code meant to be used in another project) or a file so that you can use the variables, functions, classes, etc. in it. There are many other statements in Python, such as `return` (return an object from a function), `pass` (do nothing), and `del` (delete a variable).
+The first line, `import statistics`, is an *import statement*. A *statement* is a keyword that performs some functionality. For example, an import statement imports (provides your code access to) a library (a package of existing code meant to be used in another project) or a file so that you can use the variables, functions, classes, etc. in it. There are many other statements in Python, such as `return` (return an object from a function), `pass` (do nothing), and `del` (delete a variable).
 
 The next line, `numbers = [1, 2, 3, 4, 5]`, assigns a list of 1 to 5 to the variable `numbers`. Let's deconstruct this line piece by piece:
 
-* `number` - This is a *variable*, a type of Python *object* (an object is essentially a thing that exists). Because it hasn't previously been used, this line defines and *initializes* (sets the initial value of) it.
-* `=` - This is the *assignment operator*, it sets the value of a variable. An *operator* is something that performs a (typically mathematical) action on two other things but isn't a function. Some other examples are `+` (addition), `*` (multiplication), and `**` (exponent). As a side note, `=` is not also used for checking equality like in math.
-* `[1, 2, 3, 4, 5]` - This specifies a *list* of 1 to 5. A list is a Python object that holds a list of other objects. It consists for square brackets surrounds a comma-separated list of objects. This is one of several data types you will make frequent use of.
+* `number` - This is a *variable*, a type of Python *object* (an object is essentially a thing that exists when your program is running). Because it hasn't previously been used, this line defines and *initializes* (sets the initial value of) it.
+* `=` - This is the *assignment operator*, it sets the value of a variable. An *operator* is something that performs a (typically mathematical) action on two other things but isn't a function. Some other examples are `+` (addition), `*` (multiplication), and `**` (exponent). As a side note, `=` is NOT also used for checking equality like in math.
+* `[1, 2, 3, 4, 5]` - This specifies a *list* of 1 to 5. A list is a Python object that (unsurprisingly) holds a list of other objects. It consists of square brackets surrounding a comma-separated list of objects. This is one of several data types you will make frequent use of.
 
 The next line, `print(statistics.mean(numbers))`, calls two *functions*. A function looks like `name(arguments)`, takes (optional) arguments as a comma-separated list inside the parentheses, does something, and optionally returns a result. You may hear the word "method" used similarly; we will learn the difference between a method and a function later.
 
@@ -126,7 +126,7 @@ else if 1 < 2:
     print("math isn't broken")
 ```
 
-If the first condition (`1 > 2`) is false (which it is), Python will go to the else-if statement, checks if that's condition (`1 < 2`) is true (which it is), and if so, executes the else-if's code block.
+If the first condition (`1 > 2`) is false (which it is), Python will go to the else-if statement, check if its condition (`1 < 2`) is true (which it is), and if so, execute the else-if's code block.
 
 Run the code, it should still output `math isn't broken`.
 
@@ -140,7 +140,7 @@ else if var_1 == 2:
     print("math isn't broken")
 ```
 
-Here we see a variable being used in an if-else-if statement, as well as the equality and inequality operators. `!=` checks if the first thing is not equal to the second thing. `==` checks whether the first thing is equal to the second thing (as opposed to just `=` in math). Both of these, as well as the `<` and `>` that we used before, "return" a value - True or False - indicating their result. If you want, you can `print(1 == 1)` to demonstrate this.
+Here we see a variable being used in an if-else-if statement, as well as the equality and inequality operators. `!=` checks if the first thing is not equal to the second thing. `==` checks whether the first thing is equal to the second thing (as opposed to just `=` in math). Both of these, as well as the `<` and `>` that we used before, "return" a value - True or False - indicating their result. If you want, you can open the Python Console mentioned earlier, and run `print(1 == 1)` to demonstrate this.
 
 Run the code, it should still output `math isn't broken`.
 
@@ -158,7 +158,7 @@ while counter < 5:
 
 This code does several things. Read through it and explain to yourself what each line does. You should be able to figure it out even though we haven't explained everything.
 
-Let's look at the while loop. Python checks the condition (`counter < 5`), and if true, runs the code block, then checks the condition, etc. until the condition is false.
+Let's look at the while loop. Python checks the condition (`counter < 5`), and if true, runs the code block, then checks the condition, runs the code block, etc. until the condition is false.
 
 Run the code, it should output the previous `math isn't broken` and the following:
 
@@ -170,16 +170,16 @@ Run the code, it should output the previous `math isn't broken` and the followin
 4
 ```
 
-Slightly off-topic, let's look at the `counter += 1` line. The `+=` operator adds the right side to the variable on the left side. There are several similar operators: `-=`, `/=`, `*=`, `**=`.
+Slightly off-topic, let's look at the `counter += 1` line. The `+=` operator adds the right side to the variable on the left side. It could also be written as `counter = counter + 1`. There are several similar operators: `-=`, `/=`, `*=`, `**=`.
 
 Let's see what this code does (you should have figured this out already):
 
 * Initializes `counter` to 0
 * Checks if `counter` is less than 5
-* If so, runs the code block, which prints the value of `counter` and adds 1 to counter
+* If so, runs the code block, which prints the value of `counter` and adds 1 to `counter`
 * Checks the condition again, runs the code again, etc. until `counter` is not less than 5
 
-Now, on your own, modify the code so that counter starts at 5, the loop runs while counter is greater than 2, and 1 is subtracted from `counter` instead of added. Run it, and it should output your "math isn't broken" and the following:
+Now, on your own, modify the code so that `counter` starts at 5, the loop runs while `counter` is greater than 2, and 1 is subtracted from `counter` instead of added. Run it, and it should output your "math isn't broken" and the following:
 
 ```
 5
@@ -220,4 +220,4 @@ three
 
 #### Congrats, you've learned the very basics of Python.
 
-Tutorial 2 will build on this, and cover functions.
+Tutorial 2 will build on this, and cover functions and input.
