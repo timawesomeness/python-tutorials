@@ -122,7 +122,7 @@ We can chain an if statement onto an else statement to create an `else-if`. Modi
 ```python
 if 1 > 2:
     print("math is broken!")
-else if 1 < 2:
+elif 1 < 2:
     print("math isn't broken")
 ```
 
@@ -136,7 +136,7 @@ Normally we check a variable against something in an if statement. Let's do that
 var_1 = 1
 if var_1 != 1:
     print("math is broken!")
-else if var_1 == 2:
+elif var_1 == 2:
     print("math isn't broken")
 ```
 
