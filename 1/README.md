@@ -136,7 +136,7 @@ Normally we check a variable against something in an if statement. Let's do that
 var_1 = 1
 if var_1 != 1:
     print("math is broken!")
-elif var_1 == 2:
+elif var_1 == 1:
     print("math isn't broken")
 ```
 
